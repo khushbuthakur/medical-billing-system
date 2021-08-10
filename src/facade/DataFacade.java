@@ -34,6 +34,14 @@ public class DataFacade implements Serializable {
 	public void printData(List<Person> p) {
 		print.printContent(p);
 	}
+	
+	public String sendData(List<Person> p) {
+		return print.sendContent(p);
+	}
+	
+	public String sendData(Person p) {
+		return print.sendContent(p);
+	}
 
 	public void printContentOfSinglePerson(Person p) {
 		print.printContentOfSinglePatient(p);

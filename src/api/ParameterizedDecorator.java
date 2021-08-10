@@ -73,5 +73,4 @@ public class ParameterizedDecorator implements MedicalProcedureAPI, Cloneable {
 
 		return sb.toString();
 	}
-
 }

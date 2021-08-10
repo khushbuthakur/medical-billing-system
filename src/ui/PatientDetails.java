@@ -34,7 +34,6 @@ public class PatientDetails extends javax.swing.JPanel {
     	MedicalProcedureAPI m = person.getMedicalBill(); 
     	System.out.println(m);
     	
-    	
     	Boolean isToothPaste = m.getDesc().contains("Toothpaste"); 
     	checkBoxToothPaste.setSelected(isToothPaste);
     	

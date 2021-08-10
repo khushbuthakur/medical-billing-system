@@ -13,6 +13,7 @@ import items.Tylenol;
 import statePattern.Admin;
 import statePattern.Patient;
 import statePattern.State;
+import command.UDPRecv;
 
 public class Person implements Serializable {
 
@@ -116,6 +117,14 @@ public class Person implements Serializable {
 	public void viewBillOfSinglePatient(Person p) {
 		this.role.viewBillOfAPatitent(p);
 	}
+	
+	public String viewPatientBill(Person p) {
+		return this.role.sendBills(p);
+	}
+	
+	public String viewAllPatientBill() {
+		return this.role.sendBills();
+	}
 
 	/**
 	 * demonstrate the use of this class
@@ -215,6 +224,8 @@ public class Person implements Serializable {
 
 		dan.viewBillOfSinglePatient(dan);
 		patient.viewBill();
+		
+		UDPRecv.demo(patient.viewPatientBill(patient));
 
 		System.out.println("\n\t" + Person.class.getName() + ".demo()... done!");
 	}

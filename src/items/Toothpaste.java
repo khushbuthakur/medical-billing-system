@@ -55,5 +55,8 @@ public class Toothpaste extends ItemAPI implements Serializable {
 	
 	//Getters and Setters
 	
-	
+	public static ItemAPI getObject() {
+		ItemAPI item = new ItemAPI(101, 5.99, "Toothpaste", "Crest Toothpaste");
+		return item;
+	}
 }

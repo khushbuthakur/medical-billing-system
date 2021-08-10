@@ -22,11 +22,21 @@ public class Patient implements State {
 	public void viewBills() {
 		System.out.println("You cannot view records");
 	}
+	
+	@Override
+	public String sendBills(Person p) {
+		return facade.sendData(p);
+	}
+	
+	@Override
+	public String sendBills() {
+		// TODO Auto-generated method stub
+		return "You cannot view bills of other patients";
+	}
 
 	@Override
 	public void viewBillOfAPatitent(Person p) {
 		facade.printContentOfSinglePerson(p);
-
 	}
 
 }

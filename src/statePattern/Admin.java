@@ -24,7 +24,18 @@ public class Admin implements State {
 		System.out.println("Admin view of patients");
 		List<Person> myList = facade.readData();
 		facade.printData(myList);
+	}
 
+	@Override
+	public String sendBills() {
+		List<Person> myList = facade.readData();
+		return facade.sendData(myList);
+	}
+
+	@Override
+	public String sendBills(Person p) {
+		// TODO Auto-generated method stub
+		return facade.sendData(p);
 	}
 
 	@Override

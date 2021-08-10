@@ -10,7 +10,17 @@ public class ItemAPI {
         super();
     }
     
-    /**
+    public ItemAPI(int id, double price, String name, String description) {
+		super();
+		this.id = id;
+		this.price = price;
+		this.name = name;
+		this.description = description;
+	}
+
+
+
+	/**
      * return a String representation of the object state
      */
     @Override
